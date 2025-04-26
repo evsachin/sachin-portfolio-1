@@ -56,8 +56,8 @@ const About = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                I'm a passionate full-stack developer with 5+ years of
-                experience building modern web and mobile applications. I
+                I'm a passionate full-stack developer with 2+ years of
+                experience building modern Web Apps and Mobile Applications. I
                 specialize in creating performant, accessible, and visually
                 appealing digital experiences.
               </motion.p>
