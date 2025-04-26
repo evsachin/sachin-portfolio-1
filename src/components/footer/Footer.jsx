@@ -33,7 +33,7 @@ export default function Footer() {
             <FaLinkedin className="w-6 h-6" />
           </a>
           <a
-            href="https://twitter.com/yourusername"
+            href="https://x.com/evsachin123"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-blue-400 transition-colors duration-300"
@@ -42,7 +42,7 @@ export default function Footer() {
             <FaTwitter className="w-6 h-6" />
           </a>
           <a
-            href="https://leetcode.com/yourusername"
+            href="https://leetcode.com/u/et52nNoxt2/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-yellow-400 transition-colors duration-300"
@@ -51,7 +51,7 @@ export default function Footer() {
             <SiLeetcode className="w-6 h-6" />
           </a>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:sachin.kolhe.evisiontech@gmail.com"
             className="text-gray-300 hover:text-red-400 transition-colors duration-300"
             aria-label="Email"
           >
