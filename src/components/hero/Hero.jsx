@@ -37,7 +37,7 @@ const Hero = () => {
             animate={{ y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Full-Stack Developer | MERN & Java Enthusiast | Indie Hacker
+            Web Apps & Mobile App Developement | Next.js, React, Node.js | Flutter, React Native
           </motion.p>
 
           <motion.div
