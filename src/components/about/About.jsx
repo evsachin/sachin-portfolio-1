@@ -5,7 +5,7 @@ import Resume from "../Resume";
 
 const About = () => {
   return (
-    <section id="about" className="relative overflow-hidden px-3 md:px-8 py-20 bg-gradient-to-br from-indigo-500 to-green-600">
+    <section id="about" className="relative overflow-hidden px-2 md:px-8 py-20 bg-gradient-to-br from-indigo-500 to-green-600">
       {/* Animated background elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
         <div className="absolute top-20 left-10 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
@@ -19,7 +19,7 @@ const About = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="bg-white/90 backdrop-blur-lg shadow-xl rounded-3xl p-12 text-center overflow-hidden border border-white/20">
+        <div className="bg-white/90 backdrop-blur-lg shadow-xl rounded-3xl p-4 md:p-12 text-center overflow-hidden border border-white/20">
           {/* Decorative elements */}
           <div className="absolute -top-4 -right-4 w-28 h-28 bg-blue-500 rounded-full opacity-10"></div>
           <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-purple-500 rounded-full opacity-10"></div>
