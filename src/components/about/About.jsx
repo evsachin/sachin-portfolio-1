@@ -5,94 +5,154 @@ import Resume from "../Resume";
 
 const About = () => {
   return (
-    <section id="about" className="relative overflow-hidden px-2 md:px-8 py-20 bg-gradient-to-br from-indigo-500 to-green-600">
+    <section id="about" className="relative overflow-hidden px-2 md:px-8 py-20 bg-gradient-to-br from-orange-400 via-pink-500 to-red-600">
       {/* Animated background elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-        <div className="absolute top-40 right-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-        <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+      <div className="absolute inset-0 overflow-hidden opacity-30">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-300 rounded-full mix-blend-screen filter blur-2xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-orange-300 rounded-full mix-blend-screen filter blur-2xl animate-bounce" style={{animationDuration: '3s'}}></div>
+        <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-red-300 rounded-full mix-blend-screen filter blur-2xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-pink-300 rounded-full mix-blend-screen filter blur-2xl animate-bounce" style={{animationDuration: '4s', animationDelay: '2s'}}></div>
+      </div>
+
+      {/* Floating geometric shapes */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          className="absolute top-32 right-32 w-16 h-16 border-2 border-white/30 rotate-45"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div
+          className="absolute bottom-32 left-32 w-12 h-12 bg-white/20 rounded-full"
+          animate={{ y: [-20, 20, -20] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute top-1/2 right-16 w-6 h-6 bg-yellow-300/40 transform rotate-45"
+          animate={{ rotate: [0, 180, 360] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+        />
       </div>
 
       <motion.div
-        className="max-w-5xl mx-auto relative"
-        initial={{ opacity: 0, y: 50 }}
+        className="max-w-6xl mx-auto relative z-10"
+        initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1, ease: "easeOut" }}
       >
-        <div className="bg-white/90 backdrop-blur-lg shadow-xl rounded-3xl p-4 md:p-12 text-center overflow-hidden border border-white/20">
-          {/* Decorative elements */}
-          <div className="absolute -top-4 -right-4 w-28 h-28 bg-blue-500 rounded-full opacity-10"></div>
-          <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-purple-500 rounded-full opacity-10"></div>
+        <div className="bg-white/95 backdrop-blur-xl shadow-2xl rounded-3xl p-6 md:p-16 text-center overflow-hidden border border-white/30 relative">
+          {/* Decorative corner elements */}
+          <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-orange-400 to-pink-500 opacity-20 rounded-br-full"></div>
+          <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-red-400 to-orange-500 opacity-20 rounded-tl-full"></div>
+          
+          {/* Glowing accent line */}
+          <div className="absolute top-0 left-1/4 right-1/4 h-1 bg-gradient-to-r from-transparent via-orange-400 to-transparent opacity-60"></div>
 
           <motion.h2
-            className="text-5xl font-bold text-gray-800 mb-8 relative"
-            initial={{ scale: 0.9 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2 }}
+            className="text-6xl md:text-7xl font-extrabold text-gray-800 mb-12 relative"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
           >
             About{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-pink-500 to-red-500">
               Me
             </span>
-            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></span>
+            <motion.div
+              className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-2 bg-gradient-to-r from-orange-400 via-pink-400 to-red-400 rounded-full"
+              initial={{ width: 0 }}
+              animate={{ width: 128 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+            />
           </motion.h2>
 
-          <div className="flex flex-col lg:flex-row gap-12 items-center">
-            <div className="lg:w-1/3">
-              <motion.div className="relative" whileHover={{ scale: 1.05 }}>
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl transform rotate-6"></div>
-                <div className="relative bg-white p-1 rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-                  <div className="w-64 h-64 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center">
-                    <div className="text-8xl">👨‍💻</div>
+          <div className="flex flex-col xl:flex-row gap-16 items-center">
+            <motion.div 
+              className="xl:w-1/3"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+            >
+              <motion.div 
+                className="relative group cursor-pointer" 
+                whileHover={{ scale: 1.08 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-400 via-pink-500 to-red-500 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-tl from-yellow-400 via-orange-400 to-pink-500 rounded-3xl transform -rotate-3 group-hover:-rotate-6 transition-transform duration-300 opacity-60"></div>
+                <div className="relative bg-white p-2 rounded-3xl shadow-2xl border-2 border-white overflow-hidden">
+                  <div className="w-72 h-72 bg-gradient-to-br from-orange-50 via-pink-50 to-red-50 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-100/50 to-pink-100/50"></div>
+                    <motion.div 
+                      className="text-9xl relative z-10"
+                      animate={{ rotate: [0, 5, -5, 0] }}
+                      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    >
+                      👨‍💻
+                    </motion.div>
                   </div>
                 </div>
               </motion.div>
-            </div>
+            </motion.div>
 
-            <div className="lg:w-2/3 text-left space-y-6">
+            <motion.div 
+              className="xl:w-2/3 text-left space-y-8"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.7, duration: 0.8 }}
+            >
               <motion.p
-                className="text-xl text-gray-700 leading-relaxed"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4 }}
+                className="text-2xl text-gray-700 leading-relaxed font-light"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.9 }}
               >
                 I'm a passionate full-stack developer with 2+ years of
                 experience building modern Web Apps and Mobile Applications. I
                 specialize in creating performant, accessible, and visually
-                appealing digital experiences.
+                appealing digital experiences that make a difference.
               </motion.p>
 
               <motion.div
-                className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.6 }}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.1 }}
               >
-                <div className="bg-blue-50/50 p-4 rounded-xl border border-blue-100">
-                  <h3 className="font-semibold text-blue-700 mb-2">Frontend</h3>
-                  <p className="text-gray-600">
-                    <span className="font-medium text-blue-500">React.js</span>,
+                <motion.div 
+                  className="bg-gradient-to-br from-orange-50 to-yellow-50 p-6 rounded-2xl border-2 border-orange-100/50 shadow-lg hover:shadow-xl transition-all duration-300"
+                  whileHover={{ y: -4 }}
+                >
+                  <div className="flex items-center mb-3">
+                    <div className="w-3 h-3 bg-orange-400 rounded-full mr-3"></div>
+                    <h3 className="font-bold text-orange-700 text-lg">Frontend</h3>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    <span className="font-semibold text-orange-600">React.js</span>,
                     Next.js, TypeScript, Tailwind CSS, GraphQL
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="bg-purple-50/50 p-4 rounded-xl border border-purple-100">
-                  <h3 className="font-semibold text-purple-700 mb-2">
-                    Backend
-                  </h3>
-                  <p className="text-gray-600">
-                    <span className="font-medium text-green-600">Node.js</span>,{" "}
-                    <span className="font-medium text-purple-600">Java</span>,
+                <motion.div 
+                  className="bg-gradient-to-br from-pink-50 to-red-50 p-6 rounded-2xl border-2 border-pink-100/50 shadow-lg hover:shadow-xl transition-all duration-300"
+                  whileHover={{ y: -4 }}
+                >
+                  <div className="flex items-center mb-3">
+                    <div className="w-3 h-3 bg-pink-400 rounded-full mr-3"></div>
+                    <h3 className="font-bold text-pink-700 text-lg">Backend</h3>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    <span className="font-semibold text-red-600">Node.js</span>,{" "}
+                    <span className="font-semibold text-pink-600">Java</span>,
                     Python, REST APIs, Microservices
                   </p>
-                </div>
+                </motion.div>
               </motion.div>
 
               <motion.p
-                className="text-lg text-gray-600 mt-6"
-                initial={{ opacity: 0, y: 10 }}
+                className="text-xl text-gray-600 leading-relaxed font-light"
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 }}
+                transition={{ delay: 1.3 }}
               >
                 When I'm not coding, you can find me contributing to open-source
                 projects, writing technical articles, or exploring new
@@ -101,17 +161,33 @@ const About = () => {
               </motion.p>
 
               <motion.div
-                className="flex justify-center mt-8"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1 }}
+                className="flex justify-center xl:justify-start mt-12"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.5, type: "spring", stiffness: 200 }}
               >
-                <button className="px-8 py-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  
+                <motion.button 
+                  className="group relative px-10 py-4 bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 text-white font-semibold rounded-full shadow-2xl overflow-hidden transform transition-all duration-300"
+                  whileHover={{ 
+                    scale: 1.05,
+                    boxShadow: "0 20px 40px rgba(251, 113, 133, 0.4)"
+                  }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative z-10 flex items-center space-x-2">
+                    <span>View Resume</span>
+                    <motion.div
+                      animate={{ x: [0, 4, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      →
+                    </motion.div>
+                  </div>
                   <Resume/>
-                </button>
+                </motion.button>
               </motion.div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </motion.div>
