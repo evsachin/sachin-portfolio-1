@@ -207,62 +207,97 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Tech badges */}
+          {/* Tech badges - each uniquely animated */}
+          {/* JavaScript */}
           <motion.div
-            className="absolute -top-4 -right-4 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center shadow-lg"
-            animate={{
-              y: [0, -5, 0],
-              rotate: [0, 10, -10, 0],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
+            className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg"
+            animate={{ y: [0, -10, 0], rotate: [0, 10, -10, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
           >
             <span className="text-white font-bold text-sm">JS</span>
           </motion.div>
 
+          {/* React */}
           <motion.div
-            className="absolute -bottom-4 -left-4 w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center shadow-lg"
+            className="absolute top-12 -right-8 w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center shadow-lg"
             animate={{
-              y: [0, 5, 0],
-              rotate: [0, -10, 10, 0],
+              x: [0, 10, -10, 0],
+              y: [0, 5, -5, 0],
+              rotate: [0, -5, 5, 0],
             }}
             transition={{
-              duration: 4,
+              duration: 6,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: 2,
+              delay: 1,
             }}
           >
-            <span className="text-white font-bold text-sm">⚛️</span>
+            <span className="text-white font-bold text-sm">React</span>
+          </motion.div>
+
+          {/* TypeScript */}
+          <motion.div
+            className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-sky-500 rounded-full flex items-center justify-center shadow-lg"
+            animate={{ y: [0, 8, -8, 0], scale: [1, 1.05, 0.95, 1] }}
+            transition={{
+              duration: 7,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.5,
+            }}
+          >
+            <span className="text-white font-bold text-sm">TS</span>
+          </motion.div>
+
+          {/* Tailwind */}
+          <motion.div
+            className="absolute top-12 -left-8 w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center shadow-lg"
+            animate={{
+              x: [0, -10, 10, 0],
+              y: [0, -5, 5, 0],
+              rotate: [0, 5, -5, 0],
+            }}
+            transition={{
+              duration: 6.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.8,
+            }}
+          >
+            <span className="text-white font-bold text-sm">TW</span>
+          </motion.div>
+
+          {/* Next.js */}
+          <motion.div
+            className="absolute top-1/2 -left-10 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shadow-lg"
+            animate={{ y: [0, -6, 6, 0], rotate: [0, 10, -10, 0] }}
+            transition={{
+              duration: 5.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          >
+            <span className="text-white font-bold text-xs">Next</span>
+          </motion.div>
+
+          {/* Node.js */}
+          <motion.div
+            className="absolute top-1/2 -right-10 w-12 h-12 bg-green-600 rounded-full flex items-center justify-center shadow-lg"
+            animate={{ y: [0, 6, -6, 0], rotate: [0, -10, 10, 0] }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1.2,
+            }}
+          >
+            <span className="text-white font-bold text-xs">Node</span>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-      >
-        <span className="text-gray-400 text-xs font-medium tracking-wider uppercase">
-          Scroll Down
-        </span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center"
-        >
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-            className="w-1 h-3 bg-blue-500 rounded-full mt-2"
-          />
-        </motion.div>
-      </motion.div>
+     
     </motion.section>
   );
 };

@@ -257,11 +257,11 @@ export default function Contact() {
           </form>
         </motion.div>
 
-        <div className="mt-12 text-center text-gray-600">
-          <p>Or reach out directly at:</p>
+        <div className="mt-12 px-4 text-center text-gray-600">
+          <p className="text-base sm:text-lg">Or reach out directly at:</p>
           <a
             href="mailto:sachin.kolhe.evisiontech@gmail.com"
-            className="text-blue-600 hover:text-blue-800 font-medium"
+            className="mt-2 inline-block break-all text-blue-600 hover:text-blue-800 font-medium text-sm sm:text-base"
           >
             sachin.kolhe.evisiontech@gmail.com
           </a>
